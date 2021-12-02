@@ -31,18 +31,18 @@ final class Factorial {
     * @param some_int this is the inputted int
     * @return returns
     */
-    public static int factorial(final int some_int) {
+    public static int factorial(final int someInt) {
 
         final int returnValue;
 
-        if (some_int == 1) {
+        if (someInt == 1) {
             returnValue = 1;
-        } else if (some_int == -1) {
+        } else if (someInt == -1) {
             returnValue = -1;
-        } else if (some_int > 1) {
-            returnValue = factorial(some_int - 1) * some_int;
+        } else if (someInt > 1) {
+            returnValue = factorial(someInt - 1) * someInt;
         } else {
-            returnValue = factorial(some_int + 1) * some_int;
+            returnValue = factorial(someInt + 1) * someInt;
         }
         return returnValue;
 
@@ -55,7 +55,8 @@ final class Factorial {
     */
     public static void main(final String[] args) {
         final Scanner myObjOne = new Scanner(System.in);
-        System.out.println("Please enter an integer to get the factorial from: ");
+        System.out.println("Please enter an integer to get" +
+            "the factorial from: ");
 
         try {
             final int inputInt = myObjOne.nextInt();
