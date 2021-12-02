@@ -41,6 +41,8 @@ final class Factorial {
             returnValue = -1;
         } else if (someInt > 1) {
             returnValue = factorial(someInt - 1) * someInt;
+        } else if (someInt == 0) {
+            returnValue = 1;
         } else {
             returnValue = factorial(someInt + 1) * someInt;
         }
@@ -56,16 +58,12 @@ final class Factorial {
     public static void main(final String[] args) {
         final Scanner myObjOne = new Scanner(System.in);
         System.out.println("Please enter an integer to get"
-            + "the factorial from: ");
+            + " the factorial from: ");
 
         try {
             final int inputInt = myObjOne.nextInt();
-            if (inputInt == 0) {
-                System.out.println("Please input an integer that is not 0");
-            } else {
-                final int factorialResult = factorial(inputInt);
-                System.out.println(factorialResult);
-            }
+            final int factorialResult = factorial(inputInt);
+            System.out.println(factorialResult);
         } catch (java.util.InputMismatchException ex) {
             System.out.println("That was not a valid input ");
         }
