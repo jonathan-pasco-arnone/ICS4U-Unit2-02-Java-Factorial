@@ -28,7 +28,7 @@ final class Factorial {
     /**
     * Gets the factorial of an input.
     *
-    * @param some_int this is the inputted int
+    * @param someInt this is the inputted int
     * @return returns
     */
     public static int factorial(final int someInt) {
@@ -55,8 +55,8 @@ final class Factorial {
     */
     public static void main(final String[] args) {
         final Scanner myObjOne = new Scanner(System.in);
-        System.out.println("Please enter an integer to get" +
-            "the factorial from: ");
+        System.out.println("Please enter an integer to get"
+            + "the factorial from: ");
 
         try {
             final int inputInt = myObjOne.nextInt();
