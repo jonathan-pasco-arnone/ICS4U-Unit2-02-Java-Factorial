@@ -39,12 +39,12 @@ final class Factorial {
             returnValue = 1;
         } else if (someInt == -1) {
             returnValue = -1;
-        } else if (someInt > 1) {
-            returnValue = factorial(someInt - 1) * someInt;
         } else if (someInt == 0) {
             returnValue = 1;
+        } else if (someInt < 0) {
+            returnValue = -1;
         } else {
-            returnValue = factorial(someInt + 1) * someInt;
+            returnValue = factorial(someInt - 1) * someInt;
         }
         return returnValue;
 
@@ -63,7 +63,11 @@ final class Factorial {
         try {
             final int inputInt = myObjOne.nextInt();
             final int factorialResult = factorial(inputInt);
-            System.out.println(factorialResult);
+            if (factorialResult < 0) {
+                System.out.println("No negative numbers");
+            } else {
+                System.out.println(factorialResult);
+            }
         } catch (java.util.InputMismatchException ex) {
             System.out.println("That was not a valid input ");
         }
