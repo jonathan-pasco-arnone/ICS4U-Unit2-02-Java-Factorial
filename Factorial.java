@@ -37,8 +37,6 @@ final class Factorial {
 
         if (someInt == 1) {
             returnValue = 1;
-        } else if (someInt == -1) {
-            returnValue = -1;
         } else if (someInt == 0) {
             returnValue = 1;
         } else if (someInt < 0) {
